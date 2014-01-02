@@ -14,7 +14,7 @@ from operator import itemgetter
 #           Paths, files and dates              #
 #################################################
 # Paths ==============
-CTpath = "C:\\Users\\f2i3j07\\Documents\\dev\\py\\SEMA_monthlyMetrics\\"
+CTpath = "C:\\pathname\\"
 oCTpath = CTpath
 CTfn = os.listdir(CTpath)
 oCTfn = os.listdir(oCTpath)
@@ -27,8 +27,8 @@ oCTfn = os.listdir(oCTpath)
     # Then take all files and get the numbers using xlrd.open_workbook
 # Instead, we'll just do this:
                            #"SEMA_Report_and_Alert_Metrics_week_Ending_08-29-2013"
-fn_txt = CTpath + "SEMA_Report_and_Alert_Metrics_week_Ending_"
-fntxt = "SEMA Report and Alert Metrics week Ending "
+fn_txt = CTpath + "filename"
+fntxt = "output_filename"
 # Dates ==============
 curDate = "08-29-2013"
 ofnDates = ["08-01-2013", "08-08-2013", "08-15-2013","08-22-2013"]
@@ -523,8 +523,8 @@ plt.show()
 today = datetime.datetime.now()
 today = today.isoformat()[0:10]
 
-win_savepath = "C:\\Users\\f2i3j07\\Documents\\dev\\py\\SEMA_monthlyMetrics\\graphs\\"
-mac_savepath = "/Users/F2I3J07/dev/py/SEMA_monthlyMetrics_v1.1/graphs/"
+win_savepath = "C:\\savepath\\"
+mac_savepath = "/Users/savepath"
 
 
 fig0.savefig(win_savepath + today + ' InternalThreat' + '.png')
