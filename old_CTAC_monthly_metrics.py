@@ -14,7 +14,7 @@ from operator import itemgetter
 #           Paths, files and dates              #
 #################################################
 # Paths ==============
-CTpath = "C:\\Users\\f2i3j07\\Documents\\dev\\py\\SEMA_monthlyMetrics\\"
+CTpath = "C:\\PATH\\"
 oCTpath = CTpath
 CTfn = os.listdir(CTpath)
 oCTfn = os.listdir(oCTpath)
@@ -26,9 +26,9 @@ oCTfn = os.listdir(oCTpath)
         # filenamelist.append(file)
     # Then take all files and get the numbers using xlrd.open_workbook
 # Instead, we'll just do this:
-                           #"SEMA_Report_and_Alert_Metrics_week_Ending_08-29-2013"
-fn_txt = CTpath + "SEMA_Report_and_Alert_Metrics_week_Ending_"
-fntxt = "SEMA Report and Alert Metrics week Ending "
+                           #"Report_and_Alert_Metrics_week_Ending_08-29-2013"
+fn_txt = CTpath + "filename"
+fntxt = "filename2 "
 # Dates ==============
 curDate = "08-29-2013"
 ofnDates = ["08-01-2013", "08-08-2013", "08-15-2013","08-22-2013"]
@@ -155,7 +155,7 @@ for dateTuple in dateListOfTuples:
 # Grabbing Daily Totals                        #
 ################################################
 # Some notes on totals:
-# DTE = "Daily Total Events.csv" from my email / Envision.  .csv is manually updated by me from email.
+# DTE = "Daily Total Events.csv" from my email / .  .csv is manually updated by me from email.
 # totesExternal = (Total ISS + Total SecureWorks + Total Bruteforce Events)
 # totesInternal = (Total Windows Events + Total ISS Events)
 # totesBadActor = (Total Watchlist Firewall + Total Watchlist Bluecoat)
@@ -163,20 +163,20 @@ for dateTuple in dateListOfTuples:
 # >>> mV[0]
 # ['', 40012.0, 40013.0, 40014.0, 40015.0, 40016.0, 40017.0, 40018.0]
 # >>> mV[1] - 07-26-2013
-# [u'Total ISS Events', 38073916.0, 38235015.0, 39683115.0, 38371166.0, 38858729.0, 39031435.0, 38136072.0]
+# [u'Total IDS Events', 38073916.0, 38235015.0, 39683115.0, 38371166.0, 38858729.0, 39031435.0, 38136072.0]
 
 # >>> mV[20] - 07-18-2013
-# [u'Total ISS Events', 37114112.0, 37840593.0, 38561997.0, 39298130.0, 37695179.0, 37893162.0, 38933676.0]
+# [u'Total IDS Events', 37114112.0, 37840593.0, 38561997.0, 39298130.0, 37695179.0, 37893162.0, 38933676.0]
 
 # >>> mV[39] - 07-11-2013
-# [u'Total ISS Events', 34542314.0, 35858019.0, 37567913.0, 37321014.0, 36295982.0, 37581699.0, 37741778.0]
+# [u'Total IDS Events', 34542314.0, 35858019.0, 37567913.0, 37321014.0, 36295982.0, 37581699.0, 37741778.0]
 
 # >>> mV[58] - 07-04-2013
-# [u'Total ISS Events', 32748087.0, 33205475.0, 34144845.0, 34294079.0, 35377910.0, 35318954.0, 34359102.0]
+# [u'Total IDS Events', 32748087.0, 33205475.0, 34144845.0, 34294079.0, 35377910.0, 35318954.0, 34359102.0]
 
 # >>> mV[77] - 08-01-2013
-# [u'Total ISS Events', 37370335.0, 37834224.0, 24871817.0, 21795117.0, 20702037.0, 17775681.0, 16837840.0]
-#TotalEnvisionEvents = [x for x in jN[::7]]
+# [u'Total IDS Events', 37370335.0, 37834224.0, 24871817.0, 21795117.0, 20702037.0, 17775681.0, 16837840.0]
+#TotalOTHEREvents = [x for x in jN[::7]]
 # keyNames = []
 # for line in mergedValues:
 #         for stuff in line:
@@ -516,15 +516,15 @@ weekends = np.arange(7*5)
 
 
 ######################################################
-# I fire my magic missle at the darkenss             #
+# I fire my magic missle at the darkness             #
 ######################################################
 
 plt.show()
 today = datetime.datetime.now()
 today = today.isoformat()[0:10]
 
-win_savepath = "C:\\Users\\f2i3j07\\Documents\\dev\\py\\SEMA_monthlyMetrics\\graphs\\"
-mac_savepath = "/Users/F2I3J07/dev/py/SEMA_monthlyMetrics_v1.1/graphs/"
+win_savepath = "C:\\PATH\\"
+mac_savepath = "/PATH/"
 
 
 fig0.savefig(win_savepath + today + ' InternalThreat' + '.png')
