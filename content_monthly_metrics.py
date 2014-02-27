@@ -9,7 +9,7 @@ import numpy as np
 import datetime
 from operator import itemgetter
 
-local_path = "C:\\Users\\f2i3j07\\Documents\\dev\\py\\SEMA_monthlyMetrics\\CTACdats\\"
+local_path = "C:\\PATH\\"
 
 def get_files(path, file_count):
     """
